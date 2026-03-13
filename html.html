@@ -242,15 +242,73 @@ int main() {
             <td rowspan="1" colspan="5">Total</td>
             <td>500</td>
         </tr>
-    </table>
+    </table><br>
+
+    <table>
+        <thead><!--Cabeçalho-->
+            <tr>
+                <th>Month</th>
+                <th>Savings</th>
+            </tr>
+        </thead>
+        <tbody><!--Corpo-->
+            <tr>
+                <td>January</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+                <td>February</td>
+                <td>$80</td>
+            </tr>
+        </tbody>
+        <tfoot><!--Rodapé-->
+            <tr>
+                <td>Sum</td>
+                <td>$180</td>
+            </tr>
+        </tfoot>
+    </table><hr>
     
 
     <h1>Container</h1>
     <div id="card">
         <img id="Person" src="img/sou-uma-pessoa-boa-ou-nao.jpg" alt="">
-        <h2>Titulo</h2>
+        <h2>Sou bom mesmo?</h2>
+        <p>Desenho gay</p>
         <img id="Steven" src="img/stevenuniverso.jpg" alt="">
-    </div>
+    </div><hr>
+
+    <h2>Formulário e Inputs</h2>
+    <a href="https://www.w3schools.com/hTml/html_forms.asp">Formulários</a>
+    <form action="">
+        <label for="nome">Informe seu nome:</label>
+        <input id="nome"type="text"><br>
+        <label for="cor">Cor Favorita:</label>
+        <input id="cor"type="color"><br>
+        <label for="data">Data de nascimento:</label>
+        <input id="data"type="date"><br>
+        <input type="datetime"><br>
+        <input type="file"><br>
+        <input type="number"><br>
+        <input type="checkbox" name="" id=""><br>
+        <input type="radio" name="" id=""><br>
+        <input type="range"><br>
+
+        <input type="submit" value="submit">
+        <button>Botão</button>
+    </form><br><hr>
+    
+
+    <form action="https://google.com/search" method="post">
+        <label for="chave">Informe sua busca</label>
+        <input type="text" name="q" id="chave">
+
+        <input type="submit" value="Pesquisar">
+
+
+    </form>
+    
+   
 
         
 
