@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação</title>
+
+<style>
+    #rocket{
+        display: inline-block;
+        font-size: 100px;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        animation: voar 5s ease-in 0s infinite;
+    }
+    #coracao{
+        display: inline-block;
+        font-size: 100px;
+        animation: rotacao 1s linear 0s infinite;
+    }
+    #gatinho{
+        width: 200px;
+        animation: rotacao 5s linear 0s infinite;
+    }
+
+    @keyframes voar {
+        0%{bottom: 1px;
+            
+        }
+
+        100%{ bottom: 850px;
+            left: 850px;
+            
+        }  
+    }
+    @keyframes rotacao {
+        0%{
+            font-size: 1px;
+            transform: rotate(0deg);}
+
+        100%{
+            font-size: 100px;
+            transform: rotate(360deg);}
+        
+    }
+</style>
+
+</head>
+<body>
+    <img id="gatinho" src="img/gatinho.jpg" alt="">
+    <span id="coracao">❤️</span>
+    <span id="rocket">🚀</span>
+    
+</body>
+</html>
