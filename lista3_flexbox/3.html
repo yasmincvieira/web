@@ -18,28 +18,32 @@
             height: 550px;
             border: 3px solid gray;
             border-radius: 10px;
+            display: flex;
+            flex-direction: column;
         }
         .perfil{
             width: 350px;
             height: 110px;
             border: 1px solid lightgrey;
             display: flex;
-            justify-content: space-between;
+            
             align-items: center;
-            flex-wrap: wrap;
+            
         }
         img{
             border-radius: 50%;
             width: 50px;
-            display: flex;
             justify-content: start;
-            flex-direction: column;
+            align-items: start;
+            
         }
-        
-        .texto{
-            display: flex;
+        .nome{
             flex-direction: column;
+            align-items: center;
             justify-content: center;
+        }
+        .funcao{
+            color: darkslategray;
         }
 
 
@@ -48,17 +52,16 @@
 <body>
     <div class="container">
         <div class="layout">
-            <div class="perfil"><img src="img4/pessoa1.jpg" alt="">
-                <div class="texto"><span class="nome">Luís Inácio Lula Da Silva </span><span class="funcao"></span>Ex-presidiário</div>
-            </div>
+            <div class="perfil"><img src="img4/pessoa1.jpg" alt=""><span class="nome">Luís Inácio Lula Da Silva <br> <span class="funcao">Ex-presidiário</span></span></div>
+            
 
-            <div class="perfil"><img src="img4/pessoa2.jpg" alt=""><span class="nome"> Jair Messias Bolsonaro </span><span class="funcao">Presidiário</span></div>
+            <div class="perfil"><img src="img4/pessoa2.jpg" alt=""><span class="nome"> Jair Messias Bolsonaro <br> <span class="funcao">Presidiário</span></span></div>
 
-            <div class="perfil"><img src="img4/pessoa3.jpg" alt=""><span class="nome"> Dilma Roussef </span><span class="funcao">Fugitiva</span></div>
+            <div class="perfil"><img src="img4/pessoa3.jpg" alt=""><span class="nome"> Dilma Roussef <br> <span class="funcao">Fugitiva</span></span></div>
 
-            <div class="perfil"><img src="img4/pessoa4.jpg" alt=""><span class="nome"> Nicolas Ferreira</span><span class="funcao">Chupetinha</span></div>
+            <div class="perfil"><img src="img4/pessoa4.jpg" alt=""><span class="nome"> Nicolas Ferreira <br> <span class="funcao">Chupetinha</span></span></div>
 
-            <div class="perfil"><img src="img4/pessoa5.jpg" alt=""><span class="nome"> Alexandre de Moraes</span><span class="funcao">Mini-Churros</span></div>
+            <div class="perfil"><img src="img4/pessoa5.jpg" alt=""><span class="nome"> Alexandre de Moraes <br> <span class="funcao">Mini-Churros</span></span></div>
         </div>
     </div>
     
