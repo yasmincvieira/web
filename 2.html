@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questao 2</title>
+    <style>
+        h1 {color: crimson; }
+
+        h2 {
+            color: rgb(241, 75, 108);
+        }
+
+        a { color: crimson; text-decoration: none; }
+
+        a:hover {
+            color: rgb(239, 155, 172);  
+        }
+
+        .botao {
+            background-color: crimson;
+            color: white;
+            border: 2px solid crimson;
+            border-radius: 5px;
+        }
+
+        .botao:hover {
+            animation: mudaCor 1s infinite;
+        }
+
+        @keyframes mudaCor {
+            0%   { background-color: crimson; }
+            50%  { background-color: rgb(241, 75, 108); }
+            100% { background-color: crimson; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Estrutura e Sintaxe do CSS</h1>
+
+    <h2>1. O que é uma Regra CSS?</h2>
+    <p>Uma regra CSS é composta por três partes:</p>
+    <ul>
+        <li><strong>Seletor</strong> — indica qual elemento HTML será estilizado</li>
+        <li><strong>Propriedade</strong> — o que será modificado (cor, tamanho, etc.)</li>
+        <li><strong>Valor</strong> — o valor aplicado à propriedade</li>
+    </ul>
+
+    <h2>2. Pseudo Classe — <code>:hover</code></h2>
+    <p>Aplica estilo quando o mouse passa sobre o elemento.</p>
+
+    <p>Teste: <a href="#">Passe o mouse aqui</a></p>
+
+    <h2>3. Pseudo Elemento — <code>::before</code></h2>
+    <p>Insere conteúdo visual antes do elemento, sem mudar o HTML.</p>
+
+    <h2>4. Animação com <code>@keyframes</code></h2>
+    <p>Define os estágios da animação. A propriedade <code>animation</code> aplica ao elemento.</p>
+    <p>Teste: passe o mouse sobre o botão.</p>
+    <button class="botao">Passe o mouse aqui!</button>
+
+</body>
+</html>
