@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 4</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-areas: "header header header"
+                                "left banner right"
+                                "left main right"
+                                "left low right"
+                                "footer footer footer";
+            grid-template-rows: 100px 100px 1fr 100px 100px;
+            grid-template-columns: 100px 1fr 100px;
+            height: 100vh;
+        }
+        @media (max-width:600px) {
+            .container{
+                height: auto;        
+                overflow: auto;
+                position: static;  
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(7, 150px);
+                grid-template-areas:"header"
+                                    "banner"
+                                    "left"
+                                    "main"
+                                    "right"
+                                    "low"
+                                    "footer";
+            }
+        }
+        .box{
+            display: flex;
+            border: 2px solid white;
+            justify-content: center;
+            align-items: center;
+        }
+        #Header{
+            grid-area: header;
+            background-color: orange;
+        }
+        #Banner{
+            grid-area: banner;
+            background-color: brown;
+        }
+        #Left{
+            grid-area: left;
+            background-color: mediumseagreen;
+            align-items: start;
+        }
+        #Right{
+            grid-area: right;
+            background-color: orange;
+            align-items: start;
+        }
+        #Main{
+            grid-area: main;
+            background-color: cornflowerblue;
+            justify-content: center;
+        }
+        #Low{
+            grid-area: low;
+            background-color: mediumseagreen;
+            justify-content: start;
+        }
+        #Footer{
+            grid-area: footer;
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="Header">Header</div>
+        <div class="box" id="Banner">Banner</div>
+        <div class="box" id="Left">Left Aside</div>
+        <div class="box" id="Right">Right Aside</div>
+        <div class="box" id="Main">Main Content</div>
+        <div class="box" id="Low">Low Content</div>
+        <div class="box" id="Footer">Footer</div>
+    </div>
+    
+</body>
+</html>
