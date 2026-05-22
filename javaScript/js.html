@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>JS</h1>
+
+    <div>
+        <p><strong>Tipos primitivos</strong></p>
+        <ul>
+            <li>String</li>
+            <li>Number</li>
+            <li>Undefine</li>
+            <li>Boolean</li>
+            <li>Null</li>
+        </ul><br>
+
+        <p><strong>Como declarar variáveis</strong></p>
+        <p>Usamos let ou var para declarar variáveis</p>
+        <code>
+            var nome; //cria uma variável global com identificador nome <br>
+            let idade; //cria uma variável local com idenificador idade
+        </code>
+
+        <p id="funcaoEmJs"><strong>Funções em JavaScript</strong></p>
+        <code class="language-javascript">
+            function nomeDaFunção() {
+                //código da função 
+            }
+        </code>
+        <p><strong>Funçao anônima</strong></p>
+        <code>()=>{
+
+            }
+        </code>
+
+        <div>
+            <p><strong>Tratamentos em Eventos em JavaScript</strong></p>
+
+            <p>Tratamos evento js usando <code>addEventListener</code> que vincula uma função a um evento específico do DOM.</p>
+            <p>Exemplo:</p>
+            <code class="language-javascript">
+                document.addEventListener('click', function(){
+                    console.log('Clique detectado!')
+                })
+            </code>
+
+            <p>Eventos comuns disponiveis nos Navegadores</p>
+            <ul>
+                <li>click - evento de clique</li>
+                <li>mouseover - evento de mouse sobre o elemento</li>
+                <li>mouseout - eveneto de maouse fora do elemento</li>
+                <li>mouseenter - eveneto de entrando no elemento</li>
+                <li>keypress - evento de tecla pressionado</li>
+                <li>keydown - evento de tecla pressionada</li>
+                <li>keyup - evento de tecla solta</li>
+                <li>submit - eveno de envio de formulário da tag form</li>
+                <li>DOMContentLoaded - evento disparado quando o documento HTML é completamente carregado e parseado</li>
+                <li>change - evento disparado quando o valor de um elemento de formulário é alterado</li>
+            </ul>
+
+        </div>
+            
+    </div>
+
+    <script>
+        document.addEventListener('keypress', function(event){
+            console.log('Evento keypress: ' + event.key);
+        });
+        document.addEventListener('keydown', function(event){
+            console.log('Evento keydown: ' + event.key);
+        });
+
+        if (true) {
+            var nome = "João";
+            let idade = 30;
+        }
+        console.log(nome); //Imprime "João"
+       // console.log(idade); //Erro: idade is not defined
+
+        function soma(a, b){
+            return a+b;
+        }
+
+        //Definindo uma funação que só recebe inteiros
+        function somaInteiros(a,b){
+            if (Number.isInteger(a) && Number.isInteger(b)){
+                return a+b;
+            }
+            throw new Error("Os argumentos devem ser inteiros");//cria uma msg de erro
+        }
+
+        //Declaramos uma função para escrever uma msg
+        function tratamentoMouseOver(){
+            console.log("Mouse sobre o corpo do documento");
+        }
+        //Vinculamos a função ao evento mouseover 
+        document.body.addEventListener('mouseover', tratamentoMouseOver);
+        document.body.addEventListener('mouseenter', ()=>{console.log("Mouse entrou no corpo do documento");})
+        document.body.addEventListener('mouseout', ()=>{console.log("Mouse saiu do corpo do documento");})
+
+
+    </script>
+    
+</body>
+</html>
