@@ -7,17 +7,30 @@
     <style>
         body{
             display: flex;
-            
-        }
-        #botao{
-            flex-direction: column;
+            height: 100vh;
             justify-content: center;
             align-items: center;
         }
     </style>
 </head>
 <body>
-    <button id="boato">Alterar cor de fundo</button>
-    
+    <button id="botao">Alterar cor de fundo</button>
+
+    <script>
+        let botao = document.getElementById("botao")
+
+        function randColor(){
+            let color = Math.random()*255;
+            return color.toFixed(0);
+        }
+
+        botao.addEventListener('click', ()=>{
+            document.body.style.backgroundColor = "rgb("+randColor()+","+randColor()+","+randColor()+")"
+
+        })
+
+        
+
+    </script>
 </body>
 </html>
