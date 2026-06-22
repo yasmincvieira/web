@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que é JavaScript?</title>
+    <style>
+        body{
+            padding: 1%;
+            margin: 1%;
+        }
+        h1,strong{
+            color: deeppink;
+        }
+    </style>
+</head>
+<body>
+    <h1>O que é JavaScript?</h1>
+    <p id="hora"></p>
+    
+    <p>
+        <dl>
+            <dt><strong>Motivação</strong></dt>
+            <dd>O JavaScript foi criado pela Netscape em 1995 para tornar a web interativa. A empresa precisava de uma linguagem de script leve que rodasse no navegador para tarefas simples, como validar formulários e criar animações básicas, substituindo as páginas estáticas da época que dependiam exclusivamente do servidor.</dd><br>
+            <dt><strong>Diferença entre execução no navegador de no servidor</strong></dt>
+            <dd>A principal diferença está no ambiente e no propósito: o navegador executa o JavaScript no lado do cliente (front-end) para criar interfaces e interações dinâmicas, enquanto o servidor processa regras de negócio no backend, lida com bancos de dados e gerencia arquivos.</dd><br>
+            <dt><strong>Sandbox</strong></dt>
+            <dd>A sandbox no navegador é um ambiente de execução isolado e seguro. Ele restringe o que o código JavaScript de um site pode fazer, impedindo que ele acesse arquivos do sistema, modifique o navegador ou interaja com dados de outras abas sem permissão.</dd><br>
+            <dt><strong>Objetos Globais</strong></dt>
+            <dd>Objetos globais em JavaScript fornecem funções e dados disponíveis em qualquer lugar do seu código. </dd>
+            <ul>
+                <li><strong>Document</strong></li>
+                <ul>
+                    <li>O objeto document é o ponto de entrada principal para a árvore do DOM (Document Object Model). Ele representa a estrutura da página HTML e permite que você selecione, altere, crie ou remova elementos diretamente na tela.</li>
+                    <li><strong>Uso comum:</strong> <i>document. getElementById('meu-elemento')</i> ou <i>document.querySelector('p')</i> para manipular tags HTML.</li>
+                    <li><strong>Acesso:</strong> Ele é uma propriedade do objeto global <i>(window.document)</i>, mas geralmente é chamado de forma direta.</li>
+                </ul>
+                <li><strong>Console</strong></li>
+                <ul>
+                    <li>O objeto console fornece acesso ao console de depuração do ambiente. É a principal ferramenta para verificar o estado de variáveis e testar lógicas.</li>
+                    <li><strong>Uso comum:</strong> <i>console.log('Mensagem de teste')</i>, <i>console.error()</i> e <i>console.table().</i>
+                    <li><strong>Acesso:</strong>  Disponível diretamente como <i>console.</i></li>
+                </ul>
+                <li><strong>Alert</strong></li>
+                <ul>
+                    <li>A função alert() é um método do objeto global que exibe uma caixa de diálogo pop-up no navegador com uma mensagem e um botão de "OK". Geralmente é utilizada para avisos simples, pois pausa a execução do script até que o usuário interaja.</li>
+                    <li><strong>Uso comum:</strong> <i>alert('Ação concluída com sucesso!');</i></li>
+                    <li><strong>Acesso:</strong>   Funciona chamando <i>window.alert()</i> ou simplesmente <i>alert().</i></li>
+                </ul>
+            </ul>
+        </dl>
+    </p>
+    <script>
+        console.log("Sucesso!")
+        alert("Aprenda sobre JavaScript")
+        const agora = new Date();
+        document.getElementById("hora").innerHTML = "Hora atual: " + agora.toLocaleTimeString();
+    </script>
+    
+</body>
+</html>

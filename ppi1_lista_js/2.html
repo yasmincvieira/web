@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+<body>
+    <h2>Tipos de Dados em JavaScript</h2> 
+    
+    <button onclick="executar()">Executar Script</button> 
+    
+    <h3>Tipos das Variáveis</h3> 
+    <p id="pstring"></p> 
+    <p id="pnumero"></p> 
+    <p id="pboolean"></p> 
+    <p id="pundefined"></p> 
+    <p id="pnull"></p> 
+    <p id="pobject"></p> 
+    <p id="parray"></p> 
+    
+    <h3>Operações entre Tipos</h3> 
+    <p id="op1"></p> 
+    <p id="op2"></p> 
+    <p id="op3"></p> 
+    
+    <script> 
+        function executar() {  
+            let texto = "Olá"; 
+            let numero = 10; 
+            let booleano = true; 
+            let indefinido; 
+            let nulo = null; 
+            let objeto = {nome: "Maria"}; 
+            let array = [1, 2, 3]; 
+
+            document.getElementById("pstring").innerText = "texto = '" + texto + "' > tipo: " + typeof texto; 
+            
+            document.getElementById("pnumero").innerText = "numero = " + numero + " > tipo: " + typeof numero; 
+            
+            document.getElementById("pboolean").innerText = "booleano = " + booleano + " > tipo: " + typeof booleano; 
+            
+            document.getElementById("pundefined").innerText = "indefinido = " + indefinido + " > tipo: " + typeof indefinido; 
+            
+            document.getElementById("pnull").innerText = "nulo = " + nulo + " > tipo: " + typeof nulo; 
+            
+            document.getElementById("pobject").innerText = "objeto = " + JSON.stringify(objeto) + " > tipo: " + typeof objeto;
+             
+            document.getElementById("parray").innerText = "array = [" + array + "] > tipo: " + typeof array;
+            
+            let resultado1 = texto + numero; 
+            let resultado2 = booleano * numero; 
+            let resultado3 = numero + null; 
+            
+            console.log("string + number =", resultado1); 
+            console.log("boolean * number =", resultado2);
+            console.log("number + null =", resultado3); 
+            
+            document.getElementById("op1").innerText = "'Olá' + 10 = " + resultado1 + " > O número é convertido para texto e ocorre concatenação."; 
+            
+            document.getElementById("op2").innerText = "true * 10 = " + resultado2 + " > true vale 1, então 1 × 10 = 10."; 
+            
+            document.getElementById("op3").innerText = "10 + null = " + resultado3 + " > null é convertido para 0 em operações matemáticas.";
+        } 
+    </script>
+</body>
+</html>
